@@ -18,9 +18,9 @@ Pages
             <div class="row">
                 <div class="form-group col-10">
                     <input type="text" class="form-control page-name" id="search" name="search"
-                        placeholder="Search Name Slug">
+                        placeholder="Search Name Slug" value="{{ request()->search }}">
                 </div>
-                <button type="submit" class="btn btn-secondary col-2" style="height: 2.5rem;">Search</button>
+                <button type=" submit" class="btn btn-secondary col-2" style="height: 2.5rem;">Search</button>
             </div>
         </form>
 

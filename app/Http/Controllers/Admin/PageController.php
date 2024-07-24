@@ -15,9 +15,20 @@ class PageController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $pages = Page::with('user')->orderBy('id', 'DESC')->paginate(5); // have used 5 for now, and show latest one
+        $search = $request->search;
+        $pages = Page::with('user')
+            ->where(function ($query) use ($search)
+            {
+                if ($search != '')
+                {
+                    $query->where('name', 'LIKE', '%' . $search . '%');
+                    $query->orwhere('slug', 'LIKE', '%' . $search . '%');
+                }
+            })
+            ->orderBy('id', 'DESC')
+            ->paginate(5); // have used 5 for now, and show latest one
         return view('admin.pages.index', compact('pages'));
     }
 

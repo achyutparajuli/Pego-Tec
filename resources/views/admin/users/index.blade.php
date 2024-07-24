@@ -8,7 +8,16 @@ Users
 <div class="row">
     <!-- Table Section -->
     <div class="col-md-12">
-        <h3>Users</h3>
+        <form action="{{ route('admin.users.index') }}">
+            <div class="row">
+                <div class="form-group col-10">
+                    <input type="text" class="form-control page-name" id="search" name="search"
+                        placeholder="Search Name Email" value="{{ request()->search }}">
+                </div>
+                <button type="submit" class="btn btn-secondary col-2" style="height: 2.5rem;">Search</button>
+            </div>
+        </form>
+
         <table class="table table-striped">
             <thead>
                 <tr>
