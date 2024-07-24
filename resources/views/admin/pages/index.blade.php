@@ -20,6 +20,7 @@ Pages
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Banner</th>
                     <th>Slug</th>
                     <th>Display On Menu</th>
                     <th>Created By</th>
@@ -31,6 +32,7 @@ Pages
                 @foreach($pages as $page)
                 <tr>
                     <td>{{ $page->id }}</td>
+                    <td><img src="{{ asset('storage/images/' . $page->banner) }}" class="banner-image-table"></td>
                     <td>{{ $page->name }}</td>
                     <td>{{ $page->slug }}</td>
                     <td>

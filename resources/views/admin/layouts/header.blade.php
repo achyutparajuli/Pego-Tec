@@ -45,4 +45,9 @@
         margin-left: 0.25em;
         /* Adjust spacing as needed */
     }
+
+    .banner-image-table {
+        width: auto;
+        height: 5rem;
+    }
 </style>
