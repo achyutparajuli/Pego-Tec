@@ -27,6 +27,7 @@ Pages
                 </tr>
             </thead>
             <tbody>
+                @if(count($pages) > 0)
                 @foreach($pages as $page)
                 <tr>
                     <td>{{ $page->id }}</td>
@@ -41,10 +42,16 @@ Pages
                     <td>
                         <a href="{{ route('admin.pages.edit', $page->slug) }}" class="btn btn-warning btn-sm">Edit</a>
 
-                        <a href="{{ route('admin.pages.destroy', $page->slug) }}" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="{{ route('admin.pages.destroy', $page->slug) }}"
+                            class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
                 @endforeach
+                @else
+                <tr>
+                    <td colspan="6" class="text-center">No data to display, create a new one.</td>
+                </tr>
+                @endif
             </tbody>
         </table>
 
