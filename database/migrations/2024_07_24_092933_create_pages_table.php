@@ -15,8 +15,10 @@ return new class extends Migration
         {
             $table->id();
             $table->string('name', 70);
+            $table->string('banner', 100)->nullable();
             $table->string('slug', 70)->unique();
             $table->longText('content');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->boolean('display_on_menu')->default(1);
             $table->timestamps();
         });

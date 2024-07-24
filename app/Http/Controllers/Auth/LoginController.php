@@ -16,7 +16,7 @@ class LoginController extends Controller
         if (Auth::check() && Auth::User()->role == 'admin')
         {
             toastr()->info('You are already logged-in!');
-            return redirect()->route('web.home');
+            return redirect()->route('admin.dashboard');
         }
 
         if (Auth::check() && Auth::User()->role == 'user')
@@ -49,7 +49,7 @@ class LoginController extends Controller
                 if (Auth::User()->role == 'admin')
                 {
                     // send amdin to dashbaord.
-                    return redirect()->route('web.home');
+                    return redirect()->route('admin.dashboard');
                 }
                 // if not admin then default
                 return redirect()->route('web.home');

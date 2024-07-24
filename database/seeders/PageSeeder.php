@@ -17,12 +17,14 @@ class PageSeeder extends Seeder
             'name' => 'About Us',
             'slug' => 'about-us',
             'content' => '<h5>This is About Us Page</h5>',
+            'user_id' => 1
         ]);
 
         Page::create([
             'name' => 'FAQ',
             'slug' => 'faq',
             'content' => '<h5>This is FAQ page</h5>',
+            'user_id' => 1
         ]);
     }
 }

@@ -21,6 +21,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Hi, {{ Auth::User()->name }}</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('logout') }}">Logout</a>
             </li>
