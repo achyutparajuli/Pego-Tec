@@ -18,12 +18,12 @@ Firstly Thank you for having me.
 
 
 # General Points
-1) Seeder and pagination are used in case of the sample data seeding and listing the data in the admin dashboard.
+1) Seeder and pagination are used in case of the sample data seeding and listing the data in the admin dashboard which is static for now.
 2) Have used view composer, to get the details for pages menu in the nav blade.
 3) Pages and CMS/content are managed from the page menu, Used summer note for the content section. Also there is checkbox for displaying the page on menu.
 4) Middleware is created to block the access to normal users from accessing admin.
 5) 404 page is created and slightly modified in case of user and admin.
+6) Additionally relationship between pages and user is defined to display the name of the user who created the page, however there is no log for that thing for now.
 
 
-
-Please let me know in case of any issues or confussion. I hope I have understood and submitted the code in a proper way.
+# Please let me know in case of any issues or confussion. I hope I have understood and submitted the code in a proper way.
