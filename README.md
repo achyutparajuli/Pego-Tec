@@ -25,6 +25,7 @@ Firstly Thank you for having me.
 5) 404 page is created and slightly modified in case of user and admin.
 6) Menu manager is not required since I have added display on menu option in the pages menu itself.
 7) Additionally relationship between pages and user is defined to display the name of the user who created the page, however there is no log for that thing for now.
+8) Search added on admin side listing
 
 
 # Please let me know in case of any issues or confussion. I hope I have understood and submitted the code in a proper way.
